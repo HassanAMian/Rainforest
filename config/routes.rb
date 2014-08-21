@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
-  resources :reviews
+  devise_for :users
+  devise_for :installs
+  resources :users
 
+  root 'home#index'
+
+  resources :reviews
   resources :products do 
     resources :reviews
   end
