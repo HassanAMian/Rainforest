@@ -1,3 +1,4 @@
+
 <div>
 <table class="table table-hover">
 	<thead>
@@ -5,8 +6,6 @@
 			<th>Product Name</th>
 			<th>Unit Price</th>
 			<th>Quantity</th>
-			<th>Update Quantity</th>
-			<th>Delete</th>
 		</tr>
 	</thead>
 <tr>
@@ -14,10 +13,9 @@
 		<tr>
 			<td><%= shopping_cart_item.item.name %></td>
 			<td><%= shopping_cart_item.item.formatted_price%></td>
-			<td><%= shopping_cart_item.quantity%></td>
-			<td>Icon goes here</td>
-			<td>Icon goes here</td>
-		</tr>
+			<td>
+			<%= link_to controller: "shopping_carts", action: 'remove_item', product_id: shopping_cart_item.item.id do%><i class="fa fa-minus"></i><%end%>  <%= shopping_cart_item.quantity%>   <%= link_to controller: "shopping_carts", action: 'update_quantity', product_id: shopping_cart_item.item.id do%><i class="fa fa-plus"></i><%end%></td>
+	</tr>
 	</tbody>
 </table>
 </div>

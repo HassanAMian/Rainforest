@@ -4,7 +4,11 @@ Rails.application.routes.draw do
   resources :users
   resource :shopping_cart 
   resources :home
+  resources :shopping_cart_items
+
   get 'shopping_carts/show'
+  get 'shopping_carts/remove_item'
+  get 'shopping_carts/update_quantity'
 
   root 'home#index'
 

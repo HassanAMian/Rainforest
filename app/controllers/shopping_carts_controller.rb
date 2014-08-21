@@ -8,7 +8,31 @@ class ShoppingCartsController < ApplicationController
   end
 
   def show
+  end
 
+  def remove_item
+
+    @product = Product.find(params[:product_id])
+
+    @shopping_cart.remove(@product, 1)
+
+    respond_to do |format|
+      format.html { redirect_to shopping_cart_path }
+      format.json { head :no_content }
+    end
+    
+  end
+
+  def update_quantity
+
+    @product = Product.find(params[:product_id])
+
+    @shopping_cart.add(@product, (@product.price_in_cents.to_f/100))
+
+    respond_to do |format|
+      format.html { redirect_to shopping_cart_path }
+      format.json { head :no_content }
+    end
   end
 
   private
