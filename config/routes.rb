@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   devise_for :installs
   resources :users
   resource :shopping_cart 
+  resources :home
   get 'shopping_carts/show'
 
   root 'home#index'
