@@ -1,8 +1,23 @@
-
-
 <div>
-  <div><%= shopping_cart_item.item.name %></div>
-  <div><%= shopping_cart_item.item.formatted_price%></div>
-  <div><%= shopping_cart_item.quantity%></div>
-  <br>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Product Name</th>
+			<th>Unit Price</th>
+			<th>Quantity</th>
+			<th>Update Quantity</th>
+			<th>Delete</th>
+		</tr>
+	</thead>
+<tr>
+	<tbody>
+		<tr>
+			<td><%= shopping_cart_item.item.name %></td>
+			<td><%= shopping_cart_item.item.formatted_price%></td>
+			<td><%= shopping_cart_item.quantity%></td>
+			<td>Icon goes here</td>
+			<td>Icon goes here</td>
+		</tr>
+	</tbody>
+</table>
 </div>
