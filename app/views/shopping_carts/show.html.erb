@@ -3,8 +3,7 @@
 <%= render :partial => 'shopping_cart_item', 
 :collection => @shopping_cart.shopping_cart_items %>
 
-
-
+<img src="/shop_cart.png">
 <table class="table table-striped">
 	<thead>
 		<tr>
@@ -16,7 +15,7 @@
 			<td><%= number_to_currency @shopping_cart.subtotal %></td>
 		</tr>
 		<tr>
-			<td><b>FL Taxes:</b></td>
+			<td><span class="label label-default"><b>FL Taxes:</b><span></td>
 		</tr>
 		<tr>
 			<td><%= number_to_currency @shopping_cart.taxes %></td>	

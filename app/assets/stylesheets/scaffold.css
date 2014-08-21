@@ -59,6 +59,8 @@ div.field, div.actions {
 
 margin: auto;
 text-align: center;
-
 }
 
+body {
+  background-color: black;
+}
