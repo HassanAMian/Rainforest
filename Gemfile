@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 
+gem 'acts_as_shopping_cart', '~> 0.2.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.4'
 # Use sqlite3 as the database for Active Record
@@ -27,6 +28,12 @@ gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'spring',        group: :development
 
 gem 'devise'
+
+group :development do 
+	gem 'better_errors'
+	gem 'binding_of_caller'
+	
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
