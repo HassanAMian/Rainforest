@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   devise_for :users
   devise_for :installs
   resources :users
+  resource :shopping_cart 
+  get 'shopping_carts/show'
 
   root 'home#index'
 
