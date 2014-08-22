@@ -17,7 +17,12 @@
   <%= @product.formatted_price %>
 </p>
 
-<%= link_to 'Add to cart', shopping_cart_path(:product_id => @product), :method => 'POST' %>
+<%= link_to shopping_cart_path(:product_id => @product), :method => 'POST' do %>
+
+<button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>  Add to Cart</button>
+
+<%end%>
+
 
 <h3>Reviews</h3>
 <% @product.reviews.each do |review| %>
