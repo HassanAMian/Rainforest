@@ -1,45 +1,3 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
-    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="https://roshfild.ch/en/upload/assets/images_for_pages/discount-deals.jpg" alt="Here is a great deal">
-      <div class="carousel-caption">
-      </div>
-    </div>
-    <div class="item">
-      <img src="http://tvinternetdeals.com/wp-content/uploads/2012/02/get-deals-online.jpg" alt="Here is another">
-      <div class="carousel-caption">
-      </div>
-    </div>
-  </div>
-
-  <!-- Controls -->
-  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-    <i class="fa fa-angle-double-left"></i>
-  </a>
-  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-    <i class="fa fa-angle-double-right"></i>
-  </a>
-</div>
-
-<div id="featured_products">
-<h2>Featured Products</h2>
-
-<img src="http://cdn.iofferphoto.com/img/item/576/002/994/l_st-louis-brown-mens-leather-square-sneakers-plaid-shoes-8d15.jpg" alt="..." width="200" class="img-circle">
-<img src="http://i751.photobucket.com/albums/xx157/discountsportsgear/Nixon/23301b.jpg" width="200" alt="..." class="img-circle">
-<img src="http://www.varanitux.com/images/shoes/black-square-toe.jpg" width="200" alt="..." class="img-circle">
-
-<br>
-
-
-</div>
 <div class="row">
 
             <div class="col-md-3">
@@ -91,7 +49,7 @@
                   
                           <%= link_to product do %>
                           <div class="thumbnail">
-                            <img src="http://placehold.it/320x150" alt="">
+                            <img src=<%=product.avatar.url(:medium)%>alt="">
                             <div class="caption">
                              
                                 <h4><a href="#"><%= product.name %></a>
@@ -118,5 +76,4 @@
 
                   
             </div>
-                    <h6><%= link_to 'See our products', products_path %></h6> 
         </div>
