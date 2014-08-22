@@ -1,11 +1,22 @@
 <div class="row">
 
             <div class="col-md-3">
-                <p class="lead">Shop Name</p>
+                <p class="lead">Welcome to the Jungle</p>
                 <div class="list-group">
-                    <a href="#" class="list-group-item">Category 1</a>
-                    <a href="#" class="list-group-item">Category 2</a>
-                    <a href="#" class="list-group-item">Category 3</a>
+                    <a href="#" class="list-group-item">Men</a>
+                    <a href="#" class="list-group-item">Women</a>
+                    <a href="#" class="list-group-item">Baby</a>
+                    <a href="#" class="list-group-item">Home</a>
+                    <a href="#" class="list-group-item">Office</a>
+                    <a href="#" class="list-group-item">Automotive</a>
+                    <a href="#" class="list-group-item">Industrial</a>
+                    <a href="#" class="list-group-item">Camping</a>
+                    <a href="#" class="list-group-item">Sports</a>
+                    <a href="#" class="list-group-item">Electronics</a>
+                    <a href="#" class="list-group-item">Media</a>
+                    <a href="#" class="list-group-item">Travel</a>
+                    <a href="#" class="list-group-item">Accessories</a>
+                    <a href="#" class="list-group-item">All Products</a>
                 </div>
             </div>
 
@@ -21,14 +32,14 @@
                                 <li data-target="#carousel-example-generic" data-slide-to="2" class="active"></li>
                             </ol>
                             <div class="carousel-inner">
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
-                                <div class="item">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
-                                </div>
                                 <div class="item active">
-                                    <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    <img class="slide-image" src=<%= asset_path ('Welcome1.jpg')%> alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src=<%= asset_path ('Welcome2.jpg')%> alt="">
+                                </div>
+                                <div class="item">
+                                    <img class="slide-image" src=<%= asset_path ('Welcome3.jpg')%> alt="">
                                 </div>
                             </div>
                             <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
@@ -52,8 +63,7 @@
                             <img src=<%=product.avatar.url(:medium)%>alt="">
                             <div class="caption">
                              
-                                <h4><a href="#"><%= product.name %></a>
-                                </h4>
+                                <h4><%= product.name %></h4>
                                 
                             </div>
                             <div class="ratings">
