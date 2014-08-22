@@ -13,7 +13,7 @@
   <tbody>
     <% @products.each do |product| %>
       <tr>
-        <td><%= image_tag product.avatar.url(:thumb) %></td>
+        <td><img class = "img img-rounded" src=<%=product.avatar.url(:thumb)%>></td>
         <td><%= product.name %></td>
         <td><%= product.description %></td>
         <td><%= product.formatted_price %></td>

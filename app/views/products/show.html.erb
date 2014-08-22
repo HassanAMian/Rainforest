@@ -1,37 +1,71 @@
-<div class="col-md-5" style="float:left">
-<p>
-	<%= image_tag @product.avatar.url(:medium) %>
-</p>
+    <div class="container">
 
-<h2><%= @product.name %></h2>
+        <div class="row">
 
-<h4>Product Description:</h4>
-<p><%= @product.description %></p>
+            <div class="col-md-3">
+                <p class="lead">Welcome to the Jungle</p>
+                <div class="list-group">
+                    <a href="#" class="list-group-item">Men</a>
+                    <a href="#" class="list-group-item">Women</a>
+                    <a href="#" class="list-group-item">Baby</a>
+                    <a href="#" class="list-group-item">Home</a>
+                    <a href="#" class="list-group-item">Office</a>
+                    <a href="#" class="list-group-item">Automotive</a>
+                    <a href="#" class="list-group-item">Industrial</a>
+                    <a href="#" class="list-group-item">Camping</a>
+                    <a href="#" class="list-group-item">Sports</a>
+                    <a href="#" class="list-group-item">Electronics</a>
+                    <a href="#" class="list-group-item">Media</a>
+                    <a href="#" class="list-group-item">Travel</a>
+                    <a href="#" class="list-group-item">Accessories</a>
+                    <a href=<%=products_path%> class="list-group-item">All Products</a>
+                </div>
+            </div>
 
-<h4>Price:</h4>
-<p><%= @product.formatted_price %></p>
+            <div class="col-md-9">
 
-<%= link_to shopping_cart_path(:product_id => @product), :method => 'POST' do %><button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>  Add to Cart</button><%end%>
+                <div class="thumbnail">
+                    <img class="img img-circle img-responsive" src=<%=@product.avatar.url(:medium)%> alt="">
+                    <div class="caption-full">
+                        
+                        <h4 class="pull-right"><%=@product.formatted_price%></h4>
+                        
+                        <h4><%=@product.name %>
+                        </h4>
+                        <p><%=@product.description%></p>
+                    </div>
+                    <div class="ratings">
+                        <p class="pull-right"><%=@product.reviews.length%> reviews</p>
+                        <%= link_to shopping_cart_path(:product_id => @product), :method => 'POST' do %><button type="button" class="btn btn-primary"><i class="fa fa-shopping-cart"></i>  Add to Cart</button><%end%>
+                    </div>
+                </div>
 
-<%= link_to products_path do %><button type="button" class="btn btn-default">Shop More</button><%end%>
+                <div class="well">
+                	<div class="text-left">
+                    	<h4>Reviews</h4>
+					</div>
+					<hr>
+				<% @product.reviews.each do |review| %>
+ 					<div class="row">
+                        <div class="col-md-12">
+                            <span class="pull-right">Added: <%= time_ago_in_words review.created_at %> ago</span>
+							<p><%= review.comment %></p>
+						</div>
+                    </div>		
+                   <hr>
+				<% end %>
 
-</div>
+				   <div class="text-left">
+                    	<h4>Leave a Review</h4>
+                        <%= render 'reviews/form' %>
+                    </div>
 
-<div class="col-md-7" style="float:right">
-<h3>Reviews</h3>
-<% @product.reviews.each do |review| %>
-<p>
-<%= review.comment %>
-<br>
-Added: <%= time_ago_in_words review.created_at %> ago
-</p>
-<% end %>
 
-<h3>New Review</h3>
-<%= render 'reviews/form' %>
-</div>
 
-<div style="clear:both">
-	<br><br><br><br>
-<%= link_to 'Edit', edit_product_path(@product) %> 
-</div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
