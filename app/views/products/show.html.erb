@@ -1,9 +1,12 @@
 
 <p id="notice"><%= notice %></p>
-<marquee> Sell your products fast! </marquee>
 <p>
   <strong>Name:</strong>
   <%= @product.name %>
+</p>
+
+<p>
+	<%= image_tag @product.avatar.url(:medium) %>
 </p>
 
 <p>
