@@ -6,8 +6,8 @@
 #
 default: &default
   adapter: postgresql
+  encoding: unicode
   pool: 5
-  timeout: 5000
 
 development:
   <<: *default
@@ -22,4 +22,6 @@ test:
 
 production:
   <<: *default
-  database: db/production.postgresql
+  database: Rainforest_production
+  username: Rainforest
+  password: <%= ENV['RAINFOREST_DATABASE_PASSWORD'] %>
