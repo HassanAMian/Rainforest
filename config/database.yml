@@ -22,6 +22,6 @@ test:
 
 production:
   <<: *default
-  database: Rainforest_production
-  username: Rainforest
+  database: rainforest_production
+  username: rainforest
   password: <%= ENV['RAINFOREST_DATABASE_PASSWORD'] %>
