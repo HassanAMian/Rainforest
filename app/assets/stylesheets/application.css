@@ -14,3 +14,11 @@
  *= require_self
  *= require bootstrap
  */
+a:hover {
+
+  background-color: transparent;
+  text-decoration: none;
+
+
+
+}
